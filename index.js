@@ -2,12 +2,12 @@ var readlineSync = require("readline-sync");
 var chalk = require('chalk');
 
 var score = 0;
-console.log(chalk.green.bold.underline("Welcome to Cartoons quiz") + chalk.red(" !"));
+console.log(chalk.green.bold.underline("Welcome to Shilpe's quiz on FRIENDS") + chalk.red(" !"));
 console.log(" ");
 var userName = readlineSync.question(chalk.yellow("Whats your name?  "));
 console.log(" ");
 
-console.log("Welcome " + chalk.blue(userName) + " Do you know about Cartoons");
+console.log("Welcome " + chalk.blue(userName) + " Do you know Shilpe");
 console.log(" ");
 
 //play function
@@ -28,35 +28,35 @@ function play(question, answer){
 }
 //array of objects
 var questions = [{
-  question: "Q1) In the cartoon “The Jungle Book”, which musical band refused to be a part of the vultures? A. Aerosmith B. The Beatles C. The Rolling Stones  ",
+  question: "Q1) Where do I live? \na) Prayagraj  \nb) Delhi \nc) Lucknow  \nd) Kanpur\n  ",
+  answer: "a"
+},{
+  question: "Q2) What's my College Name? \na) UIT \nb) UCER \nc) UCEM \nd) UIM\n  ",
   answer: "b"
 },{
-  question: "Q2)In the cartoon “The Little Mermaid”, how old is Ariel at the time of marrying Eric? A. 16 years old B. 18 years old C. 20 years old  ",
+  question: "Q3) What's do I more Like in drinks? \na) Coffee \nb) Tea \nc) Cold Drink \nd) Milk Shake\n  ",
   answer: "a"
 },{
-  question: "Q3) What is another name of the Mickey Mouse? A. Mortimer Mouse B. Melvin Mouse C. Marty Mouse  ",
+  question: "Q4) What's my favourite Color? \na) Blue \nb) Red \nc) Pink \nd) Purple\n  ",
   answer: "a"
 },{
-  question: "Q4) What is the original name of Winnie the Pooh? A. Edward Bear B. Wendell Bear C. Christopher Bear  ",
+  question: "Q5) Which mode do I like? \na) Dark \nb) Light \nc) Quiet Light \nd) Solarised Light\n ",
   answer: "a"
 },{
-  question: "Q5) Which yellow bird can never believe its own eyes? A. Tweety Bird B. Daffy Duck C. Sylvester Bird ",
-  answer: "a"
+  question: "Q6)Which IDE I like most? \na) NetBeans \nb) Visual Studio \nc) Espresso \nd) MonoDevelop\n ",
+  answer: "b"
 },{
-  question: "Q6)Which cartoon character does not know that he smells bad? A. Pepe Le Pew B. Yosemite Sam C. Mr. Magoo ",
-  answer: "a"
-},{
-  question: "Q7) What is the name of the villain in “The Lion King” A. Simba B. Mustafa C. Scar ",
+  question: "Q7) My favourite subject in School days? \na) Chemistry \nb) Physics \nc) Mathematics \nd) Biology\n ",
   answer: "c"
 },{
-  question: "Q8) The word “Simba” in “The Lion King” is originated from which language” A. Turkish B. Swahili C. Afrikaans",
+  question: "Q8) What's my school name? \na) APS \nb) VPS \nc) DPS \nd) MVCS\n ",
+  answer: "a"
+},{
+  question: "Q9) Which season I Like most? \na Summer \nb) Winter \nc) Autumn \nd) Spring\n  ",
   answer: "b"
 },{
-  question: "Q9) What is the name of the Mickey Mouse’s girlfriend? A. Annie B. Minnie C. Sandra  ",
-  answer: "b"
-},{
-  question: "Q10) “Little April Shower” is the song featuring in which cartoon of Disney? A. Frozen B. Bambi C. Coco  ",
-  answer: "b"
+  question: "Q10) Did Shilpe get Selected for neogCamp? \na) Absolutely Yes \nb) Sure no Doubt \nc) 100% Yes \nd) YEss\n  ",
+  answer: "a"
 }];
 
 //loop
@@ -67,8 +67,8 @@ for(var i=0; i<questions.length; i++){
 
 console.log(chalk.bgYellowBright("YAY! You SCORED " + score + " out of 10"));
 if(score >= 5){
-  console.log(chlak.bold.italic("WoW! you know well😍😍"));
+  console.log(chalk.bold.italic("WoW! you know me well😍😍"));
 }
 else{
-  console.log("Ohh..., you don't enjoy your childhood much 😜😁");
+  console.log(chalk.bold.italic("No Problem, one day you will know me well😜😁"));
 }
